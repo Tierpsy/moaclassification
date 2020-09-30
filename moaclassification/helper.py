@@ -10,13 +10,12 @@ import numpy as np
 def get_feat_set(feat_set, align_bluelight=False):
     from pathlib import Path
     import pandas as pd
+    from moaclassification import AUX_FILES_DIR
 
     if not isinstance(feat_set, str):
         raise ValueError('feat_to_select must be a string')
 
-    tierpsy_sets_root = Path(
-        '/Users/em812/Documents/Workspace/tierpsy-tracker-forked/'+
-        'tierpsy-tracker/tierpsy/extras/feat_sets')
+    tierpsy_sets_root = Path(AUX_FILES_DIR)
 
     tierpsy_set_file = tierpsy_sets_root/ (feat_set+'.csv')
 
