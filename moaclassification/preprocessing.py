@@ -8,6 +8,21 @@ Created on Thu May 21 12:51:04 2020
 import pandas as pd
 import pdb
 
+def select_feature_set(feat, align_bluelight, path_to_set, append_to_names=None):
+
+    cols = pd.read_csv(path_to_set).values.flatten()
+
+    if align_bluelight:
+        bluelight = ['prestim', 'bluelight', 'poststim']
+        cols = ['_'.join([col, blue]) for col in cols for blue in bluelight]
+
+    if append_to_names is not None:
+        cols = ['_'.join([col, a]) for col in cols for a in append_to_names]
+
+    feat = feat[[col for col in cols if col in feat]]
+
+    return feat
+
 #%% Read files Dec2019 screen
 def read_only_feat_set(feat_file, feat_set, align_bluelight=False,
                        append_to_names=None, comment='#'):
