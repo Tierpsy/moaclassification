@@ -65,6 +65,7 @@ def build_meta_and_matching_feat_dfs(feat, fname, meta, align_bluelight=True):
         read_hydra_metadata, align_bluelight_conditions
 
     feat, meta = read_hydra_metadata(feat, fname, meta, add_bluelight=True)
+
     if align_bluelight:
         feat, meta = align_bluelight_conditions(feat, meta, how = 'outer')
     print('1: ', feat.shape)
@@ -243,7 +244,7 @@ def cv_test_split(feat, meta, train_file, test_file):
     test_set = pd.read_csv(test_file)
 
     # Select cv and test set
-    meta_test = meta[meta['drug_type'].isin(test_set['drug_type'])]
+    meta_test = meta[meta['drug_type'].isin(test_set['drug_type'].values)]
     meta_train = meta[meta['drug_type'].isin(train_set['drug_type'])]
     print('n samples train={}, test={}'.format(meta_train.shape[0], meta_test.shape[0]))
     return feat.loc[meta_train.index, :], meta_train, \
@@ -299,7 +300,6 @@ def preprocess_main(feat_file, fname_file, metadata_file,
     if add_strain_id:
         feat = encode_categorical_variable(feat, meta['worm_strain'].values,
                                            base_name='strain')
-
     if moa is not None:
         meta = add_moa_info(meta, moa)
 
@@ -314,8 +314,7 @@ def preprocess_main(feat_file, fname_file, metadata_file,
             meta, bad_well_cols=bad_well_cols, feat=feat)
     if remove_missing_bluelight:
         if align_bluelight:
-            feat, meta = remove_missing_bluelight_conditions(
-                meta, feat=feat)
+            feat, meta = remove_missing_bluelight_conditions(meta, feat=feat)
     if sample_max_nan_threshold is not None:
         feat, meta = remove_samples_by_n_nan(
             feat, meta, threshold=sample_max_nan_threshold)

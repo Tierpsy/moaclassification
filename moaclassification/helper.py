@@ -33,13 +33,20 @@ def add_key(key, scores, scores_maj, scorenames):
     return scores, scores_maj
 
 def update_results(key, scores, scores_maj, _scores, _scores_maj):
-    scorenames = list(_scores_maj.keys())
+    if _scores is not None:
+        scorenames = list(_scores.keys())
+    else:
+        scorenames = list(_scores_maj.keys())
     for score in scorenames:
         if _scores is not None:
             scores[key][score] = _scores[score]
         else:
             scores[key][score] = np.ones(len(_scores_maj[score]))*np.nan
-        scores_maj[key][score] = _scores_maj[score]
+        if _scores_maj is not None:
+            scores_maj[key][score] = _scores_maj[score]
+        else:
+            scores_maj[key][score] = np.ones(len(_scores[score]))*np.nan
+
     return scores, scores_maj
 
 def append_to_key(key, scores, scores_maj, _scores, _scores_maj):
