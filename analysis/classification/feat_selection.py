@@ -1,8 +1,16 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Classification with randomly selected feature sets to estimate the performance
-of stacking compared to individual strains and pooling strains together
+Feature selection function.
+It uses an approach similar to the RFECV function of sklearn to select
+the optimal feature set for the moa classification task. The differences from
+the RFECV algorithm are the following:
+    1) we pre-select the number of features to test in each iteration
+    (instead of having a step that defined how many features to drop in each
+     iteration)
+    and
+    2) we use the compound level prediction accuracy (majority vote score)
+    as the criterion to select the best number of features
 
 Created on Thu Jul 30 11:12:48 2020
 
@@ -34,6 +42,49 @@ def main_feature_selection(
         feat, y, group, dose, scaler, estimator, cv, vote_type,
         scorer, scorenames, saveroot
         ):
+    """
+    Parameters
+    ----------
+    feat : dataframe. shape=(n_samples, n_features)
+        The dataframe containing the tierpsy features for each averaged
+        bootstrapped datapoint.
+    y : array-like, shape=(n_samples,)
+        Class labels (moa id).
+    group : array-like, shape=(n_samples,)
+        Drug name for each sample.
+    dose : array-like, shape=(n_samples,)
+        Drug dose for each sample.
+    scaler : scaler object with fit and fit_transform method
+    estimator : classifier object with fit and predict method
+    cv : int or splitter object with split method
+    vote_type : 'counts' or 'probas'
+        Defines the majority vote type.
+    scorer : list of strings or scorer objects
+        Defines the cv scores to estimate with the optimal parameter set.
+    scorenames : list of strings
+        The names of the scorers in the scorer parameter.
+    saveroot : path
+        Path to save the results.
+
+    Returns
+    -------
+    list
+        Best feature set for the moa classification task.
+
+    Saves
+    -----
+    - All selected feature sets with the number of features defined in N_FEAT_TO_TEST
+    - The CV scores (replicate level and compound level) for every selected
+    feature set size in CV_scores.csv
+    - The CV predictions at replicate level obtained with every selected
+    feature set in all_CV_results_n_feat={*}.csv
+    - The CV predictions at compound level obtained with every selected
+    feature set in CV_results_n_feat={*}.csv
+
+    Plots
+    -----
+    The CV scores for each N_FEAT_TO_TEST
+    """
 
     saveto = saveroot / 'feature_selection_results'
     saveto.mkdir(parents=True, exist_ok=True)

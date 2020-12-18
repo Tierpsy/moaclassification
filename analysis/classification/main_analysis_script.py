@@ -91,7 +91,6 @@ feat_test = feat_test.loc[meta_test.index]
 main_predict_test_set(
     feat_test[best_feat_set], meta_test['MOA_group'].values,
     meta_test['drug_type'].values, meta_test['drug_dose'].values,
-    best_estimator, cv, best_estimator['estimator'].classes_,
-    vote_type, scorer, scorenames, saveto)
+    best_estimator, cv, vote_type, scorer, scorenames, saveto)
 
 

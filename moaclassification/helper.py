@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Small generic functions used in the moaclassification analysis.
+
 Created on Fri Aug 14 14:07:23 2020
 
 @author: em812

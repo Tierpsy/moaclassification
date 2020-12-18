@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Functions that perform the main tasks of the novelty detection algorithm.
+
 Created on Sun Oct  4 13:02:49 2020
 
 @author: em812

@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
+Function to make moa predictions for the test set with the optimal trained
+estimator.
+
 Created on Fri Nov 27 19:40:39 2020
 
 @author: em812
@@ -14,11 +17,55 @@ def main_predict_test_set(
         trained_estimator, cv, class_labels,
         vote_type, scorer, scorenames,
         saveroot):
+    """
+    Parameters
+    ----------
+    feat_test : dataframe. shape=(n_samples, n_features)
+        The dataframe containing the tierpsy features for each averaged
+        bootstrapped datapoint of the test set.
+    y_test : array-like, shape=(n_samples,)
+        Class labels (moa id) for each sample in feat_test.
+    group_test : array-like, shape=(n_samples,)
+        Drug name for each sample in feat_test.
+    dose_test : array-like, shape=(n_samples,)
+        Drug dose for each sample in feat_test.
+    trained_estimator : fitted estimator or pipeline object
+        The optimal estimator trained using the entire CV set.
+    cv : int or splitter object with split method.
+    vote_type : 'counts' or 'probas'
+        Defines the majority vote type.
+    scorer : list of strings or scorer objects
+        Defines the cv scores to estimate with the optimal parameter set.
+    scorenames : list of strings
+        The names of the scorers in the scorer parameter.
+    saveroot : path
+        Path to save the results.
+
+    Returns
+    -------
+    None.
+
+    Saves
+    -----
+    - Test scores in CV_scores.csv
+    - Test predictions at replicate level in all_test_results.csv
+    - Test predictions at compound level in test_results.csv
+
+    Plots
+    -----
+    - Confusion matrix of test predictions in Figure 3C
+
+    """
 
     scorers = _get_multi_sclassifscorers(scorer)
 
     saveto = saveroot / 'predict_test_set_results'
     saveto.mkdir(parents=True, exist_ok=True)
+
+    if hasattr(trained_estimator, 'classes_'):
+        class_labels = trained_estimator.classes_
+    else:
+        class_labels = trained_estimator['estimator'].classes_
 
     #%% Predict
     pred_test = trained_estimator.predict(feat_test)

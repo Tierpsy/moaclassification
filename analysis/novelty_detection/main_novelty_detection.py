@@ -1,8 +1,28 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Classification with randomly selected feature sets to estimate the performance
-of stacking compared to individual strains and pooling strains together
+Novelty detection main scirpt:
+It uses the smoothed and balanced data from the Syngenta screens to train and
+test the anomaly detection algorithm.
+
+Part 1:
+    - Partitions the CV dataset 10 time, each time separating one of the classes
+    as presumed-model.
+    - For each partition, it trains a multi-class classifier
+    with the 9 known classes and computes the theta scores of the compounds
+    that belong to the known classes and the ones that belong to the presumed
+    novel class.
+    - Using the data from each partition, it trains 10 binary SVM classifiers
+    to flag a compound as known or novel using the theta scores.
+Part 2:
+    - Trains a multi-clas classifier using the entire CV dataset and using
+    this classifer gets predictions for the test set and the novel set.
+    - Based on these predictions, computes the theta scores for the compounds
+    of test set and the novel set.
+    - Using these theta scores, get predictions from the ensemble of binary
+    classifiers (trained in part 1) to compute the novelty score of the
+    compounds of the test set (known classes) and the compounds of the novel
+    set (novel classes).
 
 Created on Thu Jul 30 11:12:48 2020
 

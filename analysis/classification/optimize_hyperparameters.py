@@ -1,8 +1,20 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-Classification with randomly selected feature sets to estimate the performance
-of stacking compared to individual strains and pooling strains together
+Function to optimize the classifier hyperparameters for the moa classification
+task.
+
+Uses the RandomizedSearchCV algorithm of sklearn to select the optimal
+parameters from a parameter grid using 4 fold cross validation. It searches
+across N_ITER different random combinations of the parameters.
+
+The hyperparameter selection is done based on classification accuracy
+of individual replicates (not compound-level predictions).
+Ideally, we would want to select the parameters based the compound-level
+classification accuracy. However, selecting based on replicate-level
+accuracy is accepted as an alternative because the two scores
+are highly correlated, which means that in most cases the higest compound-level
+accuracy is achieved when we have the highest replicate-level accuracy.
 
 Created on Thu Jul 30 11:12:48 2020
 
@@ -16,7 +28,6 @@ from tierpsytools.analysis.drug_screenings.MIL.majority_vote import \
     majority_vote_CV
 from moaclassification.classification_helper import \
     make_score_df, make_pred_df, _plot_confusion_matrix
-import pdb
 
 PARAM_GRID = {
     'estimator__penalty': ['l1', 'l2'],
@@ -33,6 +44,53 @@ def main_optimize_hyperparameters(
         pipeline, cv,
         vote_type, scorer, scorenames,
         saveroot):
+    """
+    Parameters
+    ----------
+    feat : dataframe. shape=(n_samples, n_features)
+        The dataframe containing the tierpsy features for each averaged
+        bootstrapped datapoint.
+    y : array-like, shape=(n_samples,)
+        Class labels (moa id).
+    group : array-like, shape=(n_samples,)
+        Drug name for each sample.
+    dose : array-like, shape=(n_samples,)
+        Drug dose for each sample.
+    pipeline : pipeline object with fit and predict methods.
+        The pipeline object to optimize. It is expected to have an 'estimator'
+        component.
+    cv : int or sklearn splitter object
+        See cv parameter of RandomizedSearchCV.
+    vote_type : 'counts' or 'probas'
+        Defines the majority vote type.
+    scorer : list of strings or scorer objects
+        Defines the cv scores to estimate with the optimal parameter set.
+    scorenames : list of strings
+        The names of the scorers in the scorer parameter.
+    saveroot : path
+        Path to save the results.
+
+    Returns
+    -------
+    pipeline object
+        The pipeline object with the optimal parameters, trained using the
+        entire dataset in feat.
+
+    Saves
+    -----
+    - a dictionary with the optimal parameters for the estimator in the pipeline
+    in best_params.p
+    - the trained RandomizedSearchCV object in 'fitted_RandomizedSearchCV.p'
+    - the CV results at replicate level obtained with the optimal parameters
+    in all_CV_results.csv
+    - the CV results at compound level obtained with the optimal parameters in
+    CV_results.csv
+
+    Plots
+    -----
+    - the confusion matrix with the CV predictions in figure 3B
+
+    """
 
     saveto = saveroot / 'optimize_hyperparameters_results'
     saveto.mkdir(parents=True, exist_ok=True)
@@ -40,13 +98,6 @@ def main_optimize_hyperparameters(
     ## Use the random grid to search for best hyperparameters
     # Random search of parameters, using 4 fold cross validation,
     # search across N_ITER different combinations.
-    # The hyperparameter selection is done based on classification accuracy
-    # of individual replicates (not compound-level predictions).
-    # Ideally, we would want to select the parameters based the compound-level
-    # classification accuracy. However, selecting based on replicate-level
-    # accuracy is accepted as a viable alternative, since the two scores are
-    # highly correlated and in most cases the higest compound-level accuracy
-    # is achieved when we have the highest replicate-level accurecy.
     #------------------------------
     rf_random = RandomizedSearchCV(
         estimator = clone(pipeline), param_distributions = PARAM_GRID,
