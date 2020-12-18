@@ -1,0 +1,583 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+  "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Created with matplotlib (https://matplotlib.org/) -->
+<svg height="584.64pt" version="1.1" viewBox="0 0 576 584.64" width="576pt" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <defs>
+  <style type="text/css">
+*{stroke-linecap:butt;stroke-linejoin:round;}
+  </style>
+ </defs>
+ <g id="figure_1">
+  <g id="patch_1">
+   <path d="M 0 584.64 
+L 576 584.64 
+L 576 0 
+L 0 0 
+z
+" style="fill:#ffffff;"/>
+  </g>
+  <g id="axes_1">
+   <g id="patch_2">
+    <path d="M 135.11 464.803865 
+L 565.2 464.803865 
+L 565.2 34.713865 
+L 135.11 34.713865 
+z
+" style="fill:#ffffff;"/>
+   </g>
+   <g clip-path="url(#pbd70811c6f)">
+    <image height="430.56" id="image840003f33b" transform="scale(1 -1)translate(0 -430.56)" width="430.56" x="135.11" xlink:href="data:image/png;base64,
+iVBORw0KGgoAAAANSUhEUgAAAlYAAAJWCAYAAACapckfAAAABHNCSVQICAgIfAhkiAAAC6BJREFUeJzt2C1uFGAUhlFKRlDHOFLHFkgwXQKeHYBpcGyFYPAgcIjuAEwTcAgcpkExuCFBDB4EP3n63QTOWcGrbp7co/23w+EaAMAV2N59ND1hqevTAwAA/hXCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACKb6QEA/Oxyt5+esNTJ9nh6wjLP336cnrDU7uLJ9ISlfKwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACLCCgAgIqwAACKb6QEAsL3/bHrCMruXD6cncIV8rAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIsIKACAirAAAIpvpAQD87MGLd9MTltq9fDg9YZnL3X56wlKfvnydnrCUjxUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBENtMDAH7H87cfpycsdX52Oj2BK/Lpy9fpCUvdub2dnrCUjxUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQORo/+1wmB4B/Ll7T99MT1jq/Ox0egLAL/lYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBEhBUAQERYAQBENtMDoPL41fvpCUudn51OTwDgBz5WAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAAARYQUAEBFWAACRzfQArta9p2+mJyxzfnY6PQGA/5yPFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBARFgBAESEFQBAZDM9YLXt3UfTE5baXTyZngD8hcvdfnrCUifb4+kJkPCxAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgIiwAgCICCsAgMjR6w+fD9MjVrp188b0hKVOtsfTE4C/cLnbT09Yyq3iX+FjBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQEVYAABFhBQAQ+Q7OdT6KEIB0YAAAAABJRU5ErkJggg==" y="-34.243865"/>
+   </g>
+   <g id="matplotlib.axis_1">
+    <g id="xtick_1">
+     <g id="line2d_1">
+      <defs>
+       <path d="M 0 0 
+L 0 3.5 
+" id="m4502d8154d" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="156.6145" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_1">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 161.675838, 476.865203)" x="161.675838" y="476.865203">5-HT - antagonist</text>
+     </g>
+    </g>
+    <g id="xtick_2">
+     <g id="line2d_2">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="199.6235" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_2">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 204.684838, 476.865203)" x="204.684838" y="476.865203">AChE inhibitor</text>
+     </g>
+    </g>
+    <g id="xtick_3">
+     <g id="line2d_3">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="242.6325" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_3">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 247.780016, 476.951382)" x="247.780016" y="476.951382">GABA antagonist</text>
+     </g>
+    </g>
+    <g id="xtick_4">
+     <g id="line2d_4">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="285.6415" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_4">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 290.789016, 476.951382)" x="290.789016" y="476.951382">GluCl agonist</text>
+     </g>
+    </g>
+    <g id="xtick_5">
+     <g id="line2d_5">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="328.6505" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_5">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 333.798016, 476.951382)" x="333.798016" y="476.951382">mAChR - agonist</text>
+     </g>
+    </g>
+    <g id="xtick_6">
+     <g id="line2d_6">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="371.6595" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_6">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 376.720838, 476.865203)" x="376.720838" y="476.865203">Mitochondrial inhibition</text>
+     </g>
+    </g>
+    <g id="xtick_7">
+     <g id="line2d_7">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="414.6685" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_7">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 419.816016, 476.951382)" x="419.816016" y="476.951382">nAChR agonist</text>
+     </g>
+    </g>
+    <g id="xtick_8">
+     <g id="line2d_8">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="457.6775" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_8">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 462.829436, 476.955801)" x="462.829436" y="476.955801">Octopamine agonist</text>
+     </g>
+    </g>
+    <g id="xtick_9">
+     <g id="line2d_9">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="500.6865" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_9">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 505.747838, 476.865203)" x="505.747838" y="476.865203">Tubulin - depolymeriser</text>
+     </g>
+    </g>
+    <g id="xtick_10">
+     <g id="line2d_10">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="543.6955" xlink:href="#m4502d8154d" y="464.803865"/>
+      </g>
+     </g>
+     <g id="text_10">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-45, 548.756838, 476.865203)" x="548.756838" y="476.865203">vAChT inhibitor</text>
+     </g>
+    </g>
+    <g id="text_11">
+     <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 350.155, 563.386235)" x="350.155" y="563.386235">Predicted label</text>
+    </g>
+   </g>
+   <g id="matplotlib.axis_2">
+    <g id="ytick_1">
+     <g id="line2d_11">
+      <defs>
+       <path d="M 0 0 
+L -3.5 0 
+" id="mc2eecfbc1e" style="stroke:#000000;stroke-width:0.8;"/>
+      </defs>
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="56.218365"/>
+      </g>
+     </g>
+     <g id="text_12">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 59.797272)" x="128.11" y="59.797272">5-HT - antagonist</text>
+     </g>
+    </g>
+    <g id="ytick_2">
+     <g id="line2d_12">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="99.227365"/>
+      </g>
+     </g>
+     <g id="text_13">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 102.806272)" x="128.11" y="102.806272">AChE inhibitor</text>
+     </g>
+    </g>
+    <g id="ytick_3">
+     <g id="line2d_13">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="142.236365"/>
+      </g>
+     </g>
+     <g id="text_14">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 145.876209)" x="128.11" y="145.876209">GABA antagonist</text>
+     </g>
+    </g>
+    <g id="ytick_4">
+     <g id="line2d_14">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="185.245365"/>
+      </g>
+     </g>
+     <g id="text_15">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 188.885209)" x="128.11" y="188.885209">GluCl agonist</text>
+     </g>
+    </g>
+    <g id="ytick_5">
+     <g id="line2d_15">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="228.254365"/>
+      </g>
+     </g>
+     <g id="text_16">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 231.894209)" x="128.11" y="231.894209">mAChR - agonist</text>
+     </g>
+    </g>
+    <g id="ytick_6">
+     <g id="line2d_16">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="271.263365"/>
+      </g>
+     </g>
+     <g id="text_17">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 274.842272)" x="128.11" y="274.842272">Mitochondrial inhibition</text>
+     </g>
+    </g>
+    <g id="ytick_7">
+     <g id="line2d_17">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="314.272365"/>
+      </g>
+     </g>
+     <g id="text_18">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 317.912209)" x="128.11" y="317.912209">nAChR agonist</text>
+     </g>
+    </g>
+    <g id="ytick_8">
+     <g id="line2d_18">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="357.281365"/>
+      </g>
+     </g>
+     <g id="text_19">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 360.924334)" x="128.11" y="360.924334">Octopamine agonist</text>
+     </g>
+    </g>
+    <g id="ytick_9">
+     <g id="line2d_19">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="400.290365"/>
+      </g>
+     </g>
+     <g id="text_20">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 403.869272)" x="128.11" y="403.869272">Tubulin - depolymeriser</text>
+     </g>
+    </g>
+    <g id="ytick_10">
+     <g id="line2d_20">
+      <g>
+       <use style="stroke:#000000;stroke-width:0.8;" x="135.11" xlink:href="#mc2eecfbc1e" y="443.299365"/>
+      </g>
+     </g>
+     <g id="text_21">
+      <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:end;" transform="rotate(-0, 128.11, 446.878272)" x="128.11" y="446.878272">vAChT inhibitor</text>
+     </g>
+    </g>
+    <g id="text_22">
+     <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-90, 17.6475, 249.758865)" x="17.6475" y="249.758865">True label</text>
+    </g>
+   </g>
+   <g id="patch_3">
+    <path d="M 135.11 464.803865 
+L 135.11 34.713865 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_4">
+    <path d="M 565.2 464.803865 
+L 565.2 34.713865 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_5">
+    <path d="M 135.11 464.803865 
+L 565.2 464.803865 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="patch_6">
+    <path d="M 135.11 34.713865 
+L 565.2 34.713865 
+" style="fill:none;stroke:#000000;stroke-linecap:square;stroke-linejoin:miter;stroke-width:0.8;"/>
+   </g>
+   <g id="text_23">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 58.803522)" x="156.6145" y="58.803522">2</text>
+   </g>
+   <g id="text_24">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 58.803522)" x="199.6235" y="58.803522">1</text>
+   </g>
+   <g id="text_25">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 58.803522)" x="242.6325" y="58.803522">0</text>
+   </g>
+   <g id="text_26">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 58.803522)" x="285.6415" y="58.803522">0</text>
+   </g>
+   <g id="text_27">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 58.803522)" x="328.6505" y="58.803522">0</text>
+   </g>
+   <g id="text_28">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 58.803522)" x="371.6595" y="58.803522">0</text>
+   </g>
+   <g id="text_29">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 58.803522)" x="414.6685" y="58.803522">1</text>
+   </g>
+   <g id="text_30">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 58.803522)" x="457.6775" y="58.803522">0</text>
+   </g>
+   <g id="text_31">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 58.803522)" x="500.6865" y="58.803522">0</text>
+   </g>
+   <g id="text_32">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 58.803522)" x="543.6955" y="58.803522">0</text>
+   </g>
+   <g id="text_33">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 101.812522)" x="156.6145" y="101.812522">0</text>
+   </g>
+   <g id="text_34">
+    <text style="fill:#ffffff;font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 101.812522)" x="199.6235" y="101.812522">8</text>
+   </g>
+   <g id="text_35">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 101.812522)" x="242.6325" y="101.812522">0</text>
+   </g>
+   <g id="text_36">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 101.812522)" x="285.6415" y="101.812522">0</text>
+   </g>
+   <g id="text_37">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 101.812522)" x="328.6505" y="101.812522">0</text>
+   </g>
+   <g id="text_38">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 101.812522)" x="371.6595" y="101.812522">0</text>
+   </g>
+   <g id="text_39">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 101.812522)" x="414.6685" y="101.812522">1</text>
+   </g>
+   <g id="text_40">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 101.812522)" x="457.6775" y="101.812522">0</text>
+   </g>
+   <g id="text_41">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 101.812522)" x="500.6865" y="101.812522">0</text>
+   </g>
+   <g id="text_42">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 101.812522)" x="543.6955" y="101.812522">0</text>
+   </g>
+   <g id="text_43">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 144.821522)" x="156.6145" y="144.821522">0</text>
+   </g>
+   <g id="text_44">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 144.821522)" x="199.6235" y="144.821522">0</text>
+   </g>
+   <g id="text_45">
+    <text style="fill:#ffffff;font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 144.821522)" x="242.6325" y="144.821522">5</text>
+   </g>
+   <g id="text_46">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 144.821522)" x="285.6415" y="144.821522">0</text>
+   </g>
+   <g id="text_47">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 144.821522)" x="328.6505" y="144.821522">0</text>
+   </g>
+   <g id="text_48">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 144.821522)" x="371.6595" y="144.821522">0</text>
+   </g>
+   <g id="text_49">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 144.821522)" x="414.6685" y="144.821522">0</text>
+   </g>
+   <g id="text_50">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 144.821522)" x="457.6775" y="144.821522">0</text>
+   </g>
+   <g id="text_51">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 144.821522)" x="500.6865" y="144.821522">0</text>
+   </g>
+   <g id="text_52">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 144.821522)" x="543.6955" y="144.821522">0</text>
+   </g>
+   <g id="text_53">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 187.830522)" x="156.6145" y="187.830522">0</text>
+   </g>
+   <g id="text_54">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 187.830522)" x="199.6235" y="187.830522">0</text>
+   </g>
+   <g id="text_55">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 187.830522)" x="242.6325" y="187.830522">0</text>
+   </g>
+   <g id="text_56">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 187.830522)" x="285.6415" y="187.830522">4</text>
+   </g>
+   <g id="text_57">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 187.830522)" x="328.6505" y="187.830522">0</text>
+   </g>
+   <g id="text_58">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 187.830522)" x="371.6595" y="187.830522">0</text>
+   </g>
+   <g id="text_59">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 187.830522)" x="414.6685" y="187.830522">0</text>
+   </g>
+   <g id="text_60">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 187.830522)" x="457.6775" y="187.830522">0</text>
+   </g>
+   <g id="text_61">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 187.830522)" x="500.6865" y="187.830522">0</text>
+   </g>
+   <g id="text_62">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 187.830522)" x="543.6955" y="187.830522">0</text>
+   </g>
+   <g id="text_63">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 230.839522)" x="156.6145" y="230.839522">0</text>
+   </g>
+   <g id="text_64">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 230.839522)" x="199.6235" y="230.839522">0</text>
+   </g>
+   <g id="text_65">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 230.839522)" x="242.6325" y="230.839522">0</text>
+   </g>
+   <g id="text_66">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 230.839522)" x="285.6415" y="230.839522">0</text>
+   </g>
+   <g id="text_67">
+    <text style="fill:#ffffff;font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 230.839522)" x="328.6505" y="230.839522">5</text>
+   </g>
+   <g id="text_68">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 230.839522)" x="371.6595" y="230.839522">0</text>
+   </g>
+   <g id="text_69">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 230.839522)" x="414.6685" y="230.839522">0</text>
+   </g>
+   <g id="text_70">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 230.839522)" x="457.6775" y="230.839522">0</text>
+   </g>
+   <g id="text_71">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 230.839522)" x="500.6865" y="230.839522">0</text>
+   </g>
+   <g id="text_72">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 230.839522)" x="543.6955" y="230.839522">0</text>
+   </g>
+   <g id="text_73">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 273.848522)" x="156.6145" y="273.848522">0</text>
+   </g>
+   <g id="text_74">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 273.848522)" x="199.6235" y="273.848522">0</text>
+   </g>
+   <g id="text_75">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 273.848522)" x="242.6325" y="273.848522">0</text>
+   </g>
+   <g id="text_76">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 273.848522)" x="285.6415" y="273.848522">0</text>
+   </g>
+   <g id="text_77">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 273.848522)" x="328.6505" y="273.848522">0</text>
+   </g>
+   <g id="text_78">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 273.848522)" x="371.6595" y="273.848522">3</text>
+   </g>
+   <g id="text_79">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 273.848522)" x="414.6685" y="273.848522">0</text>
+   </g>
+   <g id="text_80">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 273.848522)" x="457.6775" y="273.848522">0</text>
+   </g>
+   <g id="text_81">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 273.848522)" x="500.6865" y="273.848522">2</text>
+   </g>
+   <g id="text_82">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 273.848522)" x="543.6955" y="273.848522">0</text>
+   </g>
+   <g id="text_83">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 316.857522)" x="156.6145" y="316.857522">0</text>
+   </g>
+   <g id="text_84">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 316.857522)" x="199.6235" y="316.857522">0</text>
+   </g>
+   <g id="text_85">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 316.857522)" x="242.6325" y="316.857522">0</text>
+   </g>
+   <g id="text_86">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 316.857522)" x="285.6415" y="316.857522">0</text>
+   </g>
+   <g id="text_87">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 316.857522)" x="328.6505" y="316.857522">0</text>
+   </g>
+   <g id="text_88">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 316.857522)" x="371.6595" y="316.857522">0</text>
+   </g>
+   <g id="text_89">
+    <text style="fill:#ffffff;font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 316.857522)" x="414.6685" y="316.857522">5</text>
+   </g>
+   <g id="text_90">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 316.857522)" x="457.6775" y="316.857522">0</text>
+   </g>
+   <g id="text_91">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 316.857522)" x="500.6865" y="316.857522">1</text>
+   </g>
+   <g id="text_92">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 316.857522)" x="543.6955" y="316.857522">2</text>
+   </g>
+   <g id="text_93">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 359.866522)" x="156.6145" y="359.866522">0</text>
+   </g>
+   <g id="text_94">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 359.866522)" x="199.6235" y="359.866522">0</text>
+   </g>
+   <g id="text_95">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 359.866522)" x="242.6325" y="359.866522">0</text>
+   </g>
+   <g id="text_96">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 359.866522)" x="285.6415" y="359.866522">0</text>
+   </g>
+   <g id="text_97">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 359.866522)" x="328.6505" y="359.866522">0</text>
+   </g>
+   <g id="text_98">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 359.866522)" x="371.6595" y="359.866522">0</text>
+   </g>
+   <g id="text_99">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 359.866522)" x="414.6685" y="359.866522">1</text>
+   </g>
+   <g id="text_100">
+    <text style="fill:#ffffff;font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 359.866522)" x="457.6775" y="359.866522">7</text>
+   </g>
+   <g id="text_101">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 359.866522)" x="500.6865" y="359.866522">0</text>
+   </g>
+   <g id="text_102">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 359.866522)" x="543.6955" y="359.866522">0</text>
+   </g>
+   <g id="text_103">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 402.875522)" x="156.6145" y="402.875522">0</text>
+   </g>
+   <g id="text_104">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 402.875522)" x="199.6235" y="402.875522">0</text>
+   </g>
+   <g id="text_105">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 402.875522)" x="242.6325" y="402.875522">0</text>
+   </g>
+   <g id="text_106">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 402.875522)" x="285.6415" y="402.875522">0</text>
+   </g>
+   <g id="text_107">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 402.875522)" x="328.6505" y="402.875522">0</text>
+   </g>
+   <g id="text_108">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 402.875522)" x="371.6595" y="402.875522">0</text>
+   </g>
+   <g id="text_109">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 402.875522)" x="414.6685" y="402.875522">1</text>
+   </g>
+   <g id="text_110">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 402.875522)" x="457.6775" y="402.875522">0</text>
+   </g>
+   <g id="text_111">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 402.875522)" x="500.6865" y="402.875522">3</text>
+   </g>
+   <g id="text_112">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 402.875522)" x="543.6955" y="402.875522">0</text>
+   </g>
+   <g id="text_113">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 156.6145, 445.884522)" x="156.6145" y="445.884522">0</text>
+   </g>
+   <g id="text_114">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 199.6235, 445.884522)" x="199.6235" y="445.884522">0</text>
+   </g>
+   <g id="text_115">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 242.6325, 445.884522)" x="242.6325" y="445.884522">0</text>
+   </g>
+   <g id="text_116">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 285.6415, 445.884522)" x="285.6415" y="445.884522">0</text>
+   </g>
+   <g id="text_117">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 328.6505, 445.884522)" x="328.6505" y="445.884522">0</text>
+   </g>
+   <g id="text_118">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 371.6595, 445.884522)" x="371.6595" y="445.884522">0</text>
+   </g>
+   <g id="text_119">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 414.6685, 445.884522)" x="414.6685" y="445.884522">0</text>
+   </g>
+   <g id="text_120">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 457.6775, 445.884522)" x="457.6775" y="445.884522">0</text>
+   </g>
+   <g id="text_121">
+    <text style="font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 500.6865, 445.884522)" x="500.6865" y="445.884522">0</text>
+   </g>
+   <g id="text_122">
+    <text style="fill:#ffffff;font-family:Arial;font-size:10px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 543.6955, 445.884522)" x="543.6955" y="445.884522">8</text>
+   </g>
+   <g id="text_123">
+    <text style="font-family:Arial;font-size:12px;font-style:normal;font-weight:normal;text-anchor:middle;" transform="rotate(-0, 350.155, 28.713865)" x="350.155" y="28.713865">CV accuracy = 0.83</text>
+   </g>
+  </g>
+ </g>
+ <defs>
+  <clipPath id="pbd70811c6f">
+   <rect height="430.09" width="430.09" x="135.11" y="34.713865"/>
+  </clipPath>
+ </defs>
+</svg>
