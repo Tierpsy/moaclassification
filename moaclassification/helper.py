@@ -6,6 +6,19 @@ Created on Fri Aug 14 14:07:23 2020
 @author: em812
 """
 import numpy as np
+import pandas as pd
+from io import StringIO
+import sys
+
+class Capturing(list):
+    def __enter__(self):
+        self._stdout = sys.stdout
+        sys.stdout = self._stringio = StringIO()
+        return self
+    def __exit__(self, *args):
+        self.extend(self._stringio.getvalue().splitlines())
+        del self._stringio    # free up some memory
+        sys.stdout = self._stdout
 
 def get_feat_set(feat_set, align_bluelight=False):
     from pathlib import Path
@@ -80,3 +93,14 @@ def sort_arrays(array_list, by_array):
     ind = np.argsort(by_array)
 
     return (x[ind] for x in array_list)
+
+def apply_mask(mask, arrays):
+    """
+    aply mask to a list of array-like objects (arrays, lists or dataframes)
+    """
+    for i, x in enumerate(arrays):
+        if isinstance(x, (np.ndarray, pd.DataFrame)):
+            arrays[i] = x[mask]
+        elif isinstance(x, list):
+            arrays[i] = [ix for ix,imask in zip(x,mask) if imask]
+    return arrays

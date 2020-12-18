@@ -8,6 +8,29 @@ Created on Sun Oct  4 13:02:49 2020
 import pandas as pd
 import numpy as np
 
+def get_novelty_score(svms, thetas, svm_feats):
+    # Get the known/novel predictions from all estimators of the ensemble
+    predictions = {}
+    for moa in svms.keys():
+        # Get estimator and weight
+        weight = svms[moa]['weight']
+        est = svms[moa]['estimator']
+
+        # Exclude the points that where predicted to belong to the presumed-novel
+        # class of this svm's partition (according to [1])
+        mask = thetas[moa]['most_likely_class']!=moa
+
+        predictions[moa] = est.predict(thetas[moa].loc[mask, svm_feats])
+        predictions[moa] = pd.Series(
+            predictions[moa]*weight, index=thetas[moa][mask].index)
+
+    # Get novelty score for each compound: weighted average of predictions
+    predictions = pd.concat(predictions, axis=1)
+    sum_weights = np.sum([w for e,w in svms.values()])
+    novelty_score = predictions.apply( lambda x: np.nansum(x)/sum_weights, axis=1 ) #
+
+    return novelty_score
+
 def theta_score(probas, group, labels):
 
     # mean probas per in drug
@@ -73,3 +96,4 @@ def get_theta_scores_out(probas, group, labels, theta_i):
     theta_s = collect_theta_info(theta_s, o_s, theta_i)
 
     return theta_s
+
