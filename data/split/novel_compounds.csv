@@ -1,0 +1,18 @@
+MOA_group,MOA_general,MOA_specific,drug_type
+1,5-HT - agonist,,SY0183
+1,5-HT - agonist,reuptake inhibitor,SY0130
+5,TRPV receptor,,SY0567
+21,Chitin biosynthesis inhibitor,,SY2176
+8,GluR agonist,,SY0860
+23,mAChR - antagonist,,SY2333
+23,mAChR - antagonist,,SY2353
+12,nAChR antagonist,,SY1235
+14,RyR,activator,SY1482
+14,RyR,inhibitor,SY1417
+16,Tubulin - stabiliser,,SY1601
+16,Tubulin - stabiliser,,SY1620
+16,Tubulin - stabiliser,,SY1676
+18,vAChT inhibitor - vesamicol type,,SY1840
+18,vAChT inhibitor - vesamicol type,,SY1824
+19,VGSC - Activator,,SY1997
+22,VGSC - Blocker,,SY2295

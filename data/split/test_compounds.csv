@@ -1,0 +1,17 @@
+MOA_group,MOA_general,MOA_specific,drug_type
+11,nAChR agonist,cyanotropane,SY1124
+3,AChE,Carbamate,SY0353
+6,GABA antagonist,orthosteric site,SY0641
+17,choline reuptake inhibitor (related to vAChT) - query if this would get into a worm - although look at the SPIROs they are huge,,SY1702
+11,nAChR agonist,neonicotinoid,SY1187
+7,GluCl agonist,mectin ,SY0718
+17,vAChT inhibitor,spiroindoline type,SY1786
+3,AChE inhibitor,Carbamate,SY0354
+6,GABA antagonist,orthosteric site,SY0617
+13,Octopamine agonist,oxazoline,SY1382
+2,5-HT,antagonist,SY0280
+10,Mitochondrial inhibition,Complex I,SY1084
+13,Octopamine agonist,oxazoline,SY1392
+3,AChE inhibitor,Organophosphate,SY0380
+9,mAChR,agonist,SY0952
+15,Tubulin - depolymeriser,inhibits polymerisation,SY1596

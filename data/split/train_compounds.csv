@@ -1,0 +1,62 @@
+MOA_group,MOA_general,MOA_specific,drug_type
+2,5-HT - antagonist,,SY0291
+2,5-HT - antagonist,,SY0283
+2,5-HT - antagonist,,SY0274
+2,5-HT - antagonist,,SY0292
+3,AChE inhibitor,Carbamate,SY0326
+3,AChE inhibitor,Carbamate,SY0358
+3,AChE inhibitor,Carbamate,SY0307
+3,AChE inhibitor,Carbamate,SY0330
+3,AChE inhibitor,Organophosphate,SY0331
+3,AChE inhibitor,Organophosphate,SY0386
+6,GABA antagonist,orthosteric site,SY0600
+6,GABA antagonist,orthosteric site,SY0612
+6,GABA antagonist,orthosteric site,SY0622
+7,GluCl agonist,mectin ,SY0791
+7,GluCl agonist,mectin ,SY0724
+7,GluCl agonist,mectin ,SY0722
+9,mAChR - agonist,,SY0938
+9,mAChR - agonist,,SY0929
+9,mAChR - agonist,,SY0988
+9,mAChR - agonist,,SY0941
+10,Mitochondrial inhibition,Complex I,SY1081
+10,Mitochondrial inhibition,Complex I,SY1048
+10,Mitochondrial inhibition,Complex II,SY1051
+10,Mitochondrial inhibition,Complex III,SY1087
+11,nAChR agonist,acr-23 receptor,SY1154
+11,nAChR agonist,all nicotinic receptors,SY1104
+11,nAChR agonist,lev-1 receptor,SY1140
+11,nAChR agonist,neonicotinoid,SY1189
+11,nAChR agonist,neonicotinoid,SY1184
+13,Octopamine agonist,amidine,SY1304
+13,Octopamine agonist,imidazoline,SY1391
+13,Octopamine agonist,imidazoline,SY1321
+13,Octopamine agonist,octopamine,SY1339
+13,Octopamine agonist,thiazoline,SY1344
+13,Octopamine agonist,thiazoline,SY1361
+15,Tubulin - depolymeriser,,SY1568
+15,Tubulin - depolymeriser,inhibits polymerisation,SY1559
+17,vAChT inhibitor,spiroindoline type,SY1769
+17,vAChT inhibitor,spiroindoline type,SY1719
+17,vAChT inhibitor,spiroindoline type,SY1776
+17,vAChT inhibitor,spiroindoline type,SY1783
+3,AChE inhibitor,Carbamate,SY0376
+11,nAChR agonist,neonicotinoid,SY1101
+7,GluCl agonist,mectin ,SY0774
+10,Mitochondrial inhibition,Complex III,SY1021
+15,Tubulin - depolymeriser,inhibits polymerisation,SY1579
+6,GABA antagonist,orthosteric site,SY0658
+17,vAChT inhibitor,spiroindoline-type,SY1782
+17,vAChT inhibitor,spiroindoline-type,SY1793
+17,vAChT inhibitor,spiroindoline-type,SY1727
+17,vAChT inhibitor,spiroindoline-type,SY1713
+3,AChE inhibitor,Carbamate,SY0313
+15,Tubulin - depolymeriser,depolymeriser,SY1551
+3,AChE inhibitor,Carbamate,SY0372
+13,Octopamine agonist,thiazoline,SY1362
+13,Octopamine agonist,imidazoline,SY1386
+9,mAChR - agonist,,SY0983
+11,nAChR agonist,neonicotinoid,SY1194
+11,nAChR agonist,neonicotinoid,SY1134
+6,GABA antagonist,orthosteric site,SY0611
+0,Control,,DMSO
