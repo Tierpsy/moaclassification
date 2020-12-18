@@ -162,8 +162,8 @@ rc_params = {
     }
 with plt.rc_context(rc_params):
     plt.savefig(savefig/'heatmap_average_doses_align_blue=True_{}.png'.format(method))
-    plt.savefig(savefig/'heatmap_average_doses_align_blue=True_{}.svg'.format(method))
-    plt.savefig(savefig/'heatmap_average_doses_align_blue=True_{}.pdf'.format(method))
+    # plt.savefig(savefig/'heatmap_average_doses_align_blue=True_{}.svg'.format(method))
+    # plt.savefig(savefig/'heatmap_average_doses_align_blue=True_{}.pdf'.format(method))
 plt.close()
 
  #%% Get the cluster purity
