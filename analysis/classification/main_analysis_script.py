@@ -7,7 +7,7 @@ Created on Fri Nov 27 16:58:52 2020
 """
 from pathlib import Path
 import pandas as pd
-from tierpsytools.feature_processing.scaling_class import scalingClass
+from tierpsytools.preprocessing.scaling_class import scalingClass
 from sklearn.pipeline import Pipeline
 from sklearn.linear_model import LogisticRegression
 from tierpsytools.analysis.cv_splitters import StratifiedGroupKFold
@@ -16,6 +16,7 @@ from feat_selection import main_feature_selection
 from optimize_hyperparameters import main_optimize_hyperparameters
 from predict_test_set import main_predict_test_set
 import pdb
+from moaclassification import INPUT_DIR
 
 #%%
 # Input parameters
@@ -44,14 +45,11 @@ scorer = ['accuracy', ClassifScorer(scorer='f1',average='macro'),
 scorenames = ['accuracy', 'f1', 'roc_auc', 'mcc']
 
 # Define input directories
-root = Path('/Users/em812/Documents/Workspace/Drugs/StrainScreens/SyngentaN2/majority_vote_set_univ')
+root_in = Path(INPUT_DIR) / 'get_smoothed_balanced_data' / 'smoothed_balanced_data'
 
 # Input directory
-root_in = root/'get_augmented_datasets' / 'filtered_data_LMM_curated'
-root_in = root_in / 'filtered_align_blue={}_balanced={}_n_average={}'.format(align_blue, balance_classes, n_average)
-
-data_file = root_in/ 'augmented_average_dose_dataset_cv.csv'
-meta_file = root_in/ 'augmented_average_dose_metadata_cv.csv'
+data_file = root_in / 'features_cv.csv'
+meta_file = root_in / 'metadata_cv.csv'
 
 # Save results to
 saveto = Path().cwd() / 'results'
@@ -65,8 +63,6 @@ meta = pd.read_csv(meta_file, index_col=None)
 # Remove DMSO points
 meta = meta[meta['MOA_group']!=0.0]
 feat = feat.loc[meta.index]
-
-moa_mapper = dict(meta[['MOA_group', 'MOA_general']].values)
 
 #%% Feature selection
 best_feat_set = main_feature_selection(

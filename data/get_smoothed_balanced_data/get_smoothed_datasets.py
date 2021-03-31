@@ -16,6 +16,7 @@ from tierpsytools.analysis.drug_screenings.bagging_drug_data import \
 from moaclassification.helper import get_drug2moa_mapper
 from moaclassification.preprocessing import cv_test_split, impute_nans
 from tierpsytools.feature_processing.preprocess_features import encode_categorical_variable
+from moaclassification import INPUT_DIR
 import pdb
 
 #%% Input
@@ -28,14 +29,10 @@ n_average_doses = 5
 balance = True
 
 # root directory
-root = Path('/Users/em812/Documents/Workspace/Drugs/StrainScreens/SyngentaN2')
-# feature files directory
-root_in = root/ 'create_datasets_both_screens'/'all_data'
-root_in = root_in / 'filtered_align_blue={}_average_dose={}_feat={}'.format(
-    align_blue, False, feat_set)
+root_in = Path(INPUT_DIR)
 
 # test_train split directory
-root_split = root/'test_set'/'univariate_LMM'/ 'filtered_data' / 'curated'
+root_split = root_in / 'split'
 
 # features and metadata files
 feat_file = root_in/ 'features.csv'

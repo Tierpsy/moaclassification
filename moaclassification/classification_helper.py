@@ -10,7 +10,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 
 def make_pred_df(y, drug_type, drug_dose, pred, probas, labels):
-    from tierpsytools.analysis.drug_screenings.MIL.majority_vote import \
+    from tierpsytools.drug_screenings.MIL.majority_vote import \
         get_majority_vote, _get_y_group
 
     # Make a dataframe with the predictions of the classifier (class labels and

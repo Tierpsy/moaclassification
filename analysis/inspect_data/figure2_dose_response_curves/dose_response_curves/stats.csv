@@ -1,0 +1,13 @@
+drug,,pval,coef,corr_pval
+SY1048,curvature_hips_abs_50th,0.002238269,9.33E-06,0.237393444
+SY1048,angular_velocity_head_tip_abs_50th,1.04E-29,-0.011296293,7.96E-08
+SY1081,curvature_hips_abs_50th,0.229978472,4.31E-06,0.441952739
+SY1081,angular_velocity_head_tip_abs_50th,6.75E-20,-0.010860258,0.285636786
+SY1021,curvature_hips_abs_50th,0.352899345,7.81E-07,0.466376786
+SY1021,angular_velocity_head_tip_abs_50th,0.002300859,-0.000822642,0.118026412
+SY1793,curvature_hips_abs_50th,3.01E-103,0.002071212,2.58E-50
+SY1793,angular_velocity_head_tip_abs_50th,,,1.57E-16
+SY1786,curvature_hips_abs_50th,0.000239015,8.89E-06,6.69E-26
+SY1786,angular_velocity_head_tip_abs_50th,0.060435358,-0.001193936,0.000284697
+SY1713,curvature_hips_abs_50th,2.51E-43,3.17E-05,1.53E-13
+SY1713,angular_velocity_head_tip_abs_50th,7.71E-19,-0.004296276,3.45E-07

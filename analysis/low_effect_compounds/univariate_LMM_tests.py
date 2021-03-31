@@ -14,9 +14,11 @@ from pathlib import Path
 from tierpsytools.drug_screenings.filter_compounds import \
     compounds_with_low_effect_univariate
 from moaclassification import INPUT_DIR
+from sklearn.model_selection import train_test_split
 
 #%% Input
 control = 'DMSO'
+random_state = 5387
 
 # Input directory
 data_file = Path(INPUT_DIR) / 'features.csv'
@@ -50,3 +52,24 @@ pd.Series(signif_effect_drugs, name='signif_effect_drugs').to_csv(
 pd.Series(error_drugs, name='error_drugs').to_csv(
     saveto/'error_drugs.csv', index=None)
 
+#%% Null model: DMSO - DMSO
+mask = meta['drug_type'] == 'DMSO'
+meta = meta[mask].reset_index(drop=True)
+feat = feat[mask].reset_index(drop=True)
+idx1, idx2 = train_test_split(meta.index, test_size=0.5, random_state=random_state, stratify=meta['date_yyyymmdd'])
+
+# Split data randomly in two groups
+meta.insert(0, 'group', [0]*meta.shape[0])
+meta.loc[idx2, 'group'] = 1
+meta.loc[meta['group']==1, 'drug_dose'] = 1
+
+signif_effect_drugs, low_effect_drugs, error_drugs, significant_df, pvals_df = \
+    compounds_with_low_effect_univariate(
+        feat, meta['group'], drug_dose=meta['drug_dose'],
+        random_effect=meta['date_yyyymmdd'],
+        control=0, test='LMM', comparison_type='multiclass',
+        multitest_method='fdr_by', fdr=0.01,
+        ignore_names=None, n_jobs=-1)
+
+pvals_df.to_csv(saveto/'null_pvals_LMM.csv')
+significant_df.to_csv(saveto/'null_significant_LMM.csv')

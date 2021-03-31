@@ -24,7 +24,7 @@ Created on Thu Jul 30 11:12:48 2020
 import pickle
 from sklearn.model_selection import RandomizedSearchCV
 from sklearn.base import clone
-from tierpsytools.analysis.drug_screenings.MIL.majority_vote import \
+from tierpsytools.drug_screenings.MIL.majority_vote import \
     majority_vote_CV
 from moaclassification.classification_helper import \
     make_score_df, make_pred_df, _plot_confusion_matrix

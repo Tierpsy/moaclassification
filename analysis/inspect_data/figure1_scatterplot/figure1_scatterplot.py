@@ -60,7 +60,7 @@ error = 'std'
 # First plot average points of all drugs at all doses (background grey points)
 # without errorbars
 data=pd.concat([feat[ft_to_plot], meta[['drug_type', 'drug_dose']]], axis=1)
-data = data.groupby(by=['drug_type', 'drug_dose']).agg('mean')
+data = data.groupby(by=['drug_type', 'drug_dose']).agg(['mean', error])
 
 plt.figure()
 plt.rcParams.update({'legend.fontsize': 15,
@@ -70,10 +70,20 @@ plt.rcParams.update({'legend.fontsize': 15,
          'ytick.labelsize': 13,
          'svg.fonttype' : 'none',
          'font.sans-serif' : 'Arial'})
+
 plt.scatter(
-    x=data[ft_to_plot[0]], y=data[ft_to_plot[1]],
+    x=data[ft_to_plot[0]]['mean'], y=data[ft_to_plot[1]]['mean'],
     marker='o', edgecolors='none', label='__nolegend__', color='grey',
     alpha=0.2)
+
+plt.errorbar(
+        x=data[ft_to_plot[0]]['mean'],
+        y=data[ft_to_plot[1]]['mean'],
+        xerr=data[ft_to_plot[0]][error],
+        yerr=data[ft_to_plot[1]][error],
+        marker=None, color='grey',
+        alpha=0.2, linestyle='', elinewidth=0.5
+        )
 
 # Then plot the chosen drugs at the chosen doses
 data=pd.concat([featp[ft_to_plot], metap[['drug_type', 'drug_dose']]], axis=1)
@@ -82,8 +92,8 @@ data = data.groupby(by='drug_type').agg(['mean', error])
 
 for drug in data.index:
     plt.errorbar(
-        x=data.loc[drug]['curvature_mean_tail_abs_90th']['mean'],
-        y=data.loc[drug]['speed_90th']['mean'],
+        x=data.loc[drug][ft_to_plot[0]]['mean'],
+        y=data.loc[drug][ft_to_plot[1]]['mean'],
         xerr=data.loc[drug]['curvature_mean_tail_abs_90th'][error],
         yerr=data.loc[drug]['speed_90th'][error],
         marker='o', linestyle='', label=moamapper[drug]
@@ -92,6 +102,7 @@ for drug in data.index:
 plt.legend()
 plt.xlabel('tail curvature ($\mu m^{-1}$)', )
 plt.ylabel('speed ($\mu m/s$)')
+plt.xlim([0,0.024])
 plt.tight_layout()
 plt.savefig(saveto/'errorbar_{}.pdf'.format(error))
 plt.savefig(saveto/'errorbar_{}.svg'.format(error))

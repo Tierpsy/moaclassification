@@ -1,0 +1,9 @@
+,cv_score,sample_type,score,fold
+0,0.116991643454039,standard,accuracy,0
+0,0.10448531705548722,standard,f1,0
+0,0.49884610327846274,standard,roc_auc,0
+0,0.0021954961003680068,standard,mcc,0
+0,0.125,majority,accuracy,0
+0,0.10666666666666666,majority,f1,0
+0,0.576851851851852,majority,roc_auc,0
+0,-0.009651592463163182,majority,mcc,0

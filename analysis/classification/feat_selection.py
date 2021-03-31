@@ -21,7 +21,7 @@ import pandas as pd
 from sklearn.base import clone
 from sklearn.feature_selection import RFE
 from sklearn.pipeline import Pipeline
-from tierpsytools.analysis.drug_screenings.MIL.majority_vote import \
+from tierpsytools.drug_screenings.MIL.majority_vote import \
     majority_vote_CV
 from moaclassification.classification_helper import \
     make_score_df, make_pred_df, get_best_feat_size, _plot_cv_results_by_key

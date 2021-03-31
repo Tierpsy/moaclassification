@@ -14,7 +14,7 @@ from moaclassification.classification_helper import \
 
 def main_predict_test_set(
         feat_test, y_test, group_test, dose_test,
-        trained_estimator, cv, class_labels,
+        trained_estimator, cv,
         vote_type, scorer, scorenames,
         saveroot):
     """
@@ -95,7 +95,10 @@ def main_predict_test_set(
     res_df.to_csv(saveto/'test_results.csv')
 
     #%% Plot confusion matrix
+    test_acc = score_df.loc[
+        (score_df['sample_type']=='majority') &
+        (score_df['score']=='accuracy'), 'cv_score'].values[0]
     _plot_confusion_matrix(
-        res_df, title=None, savefig=saveto/'figure3_test_set_confusion_matrix.svg')
+        res_df, title='Test accuracy = {:.3f}'.format(test_acc), savefig=saveto/'figure3_test_set_confusion_matrix.svg')
 
     return

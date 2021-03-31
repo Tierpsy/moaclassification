@@ -1,4 +1,4 @@
 MOA_group,drug_type,drug_dose,MOA_general,MOA_specific
-2,_SY0274,30,5-HT antagonist,
-7,_SY0791,10,GluCl agonist,mectin 
-17,_SY1713,150,vAChT inhibitor,spiroindoline-type
+2,SY0274,30,5-HT antagonist,
+7,SY0791,10,GluCl agonist,mectin 
+17,SY1713,150,vAChT inhibitor,spiroindoline-type

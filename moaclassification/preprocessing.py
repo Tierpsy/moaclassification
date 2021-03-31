@@ -62,9 +62,9 @@ def read_files(
 #%% Build metadata and matching features dfs
 def build_meta_and_matching_feat_dfs(feat, fname, meta, align_bluelight=True):
     from tierpsytools.read_data.hydra_metadata import \
-        read_hydra_metadata, align_bluelight_conditions
+        build_matching_feat_meta, align_bluelight_conditions
 
-    feat, meta = read_hydra_metadata(feat, fname, meta, add_bluelight=True)
+    feat, meta = build_matching_feat_meta(feat, fname, meta, add_bluelight=True)
 
     if align_bluelight:
         feat, meta = align_bluelight_conditions(feat, meta, how = 'outer')
@@ -174,14 +174,20 @@ def select_tierpsy_feature_set(feat, feat_set, align_bluelight, append_to_names=
 #%%
 # Remove bad wells and preprocess features
 def drop_feat_groups(feat, keywords):
+    n_feat = feat.shape[1]
+
     # Remove features by keywords
     drop_ft = [col for col in feat.columns if any([key in col for key in keywords])]
     feat = feat[feat.columns.difference(drop_ft)]
-    print('drop feat groups: ', feat.shape)
+
+    print('features dropped by feat groups: ', n_feat - feat.shape[1])
+
     return feat
 
 def remove_bad_wells(meta, bad_well_cols=None, feat=None):
     # remove bad wells of any type
+    n_samples = meta.shape[0]
+
     if bad_well_cols is None:
         bad_well_cols = [col for col in meta.columns if 'is_bad' in col]
 
@@ -189,8 +195,9 @@ def remove_bad_wells(meta, bad_well_cols=None, feat=None):
 
     if feat is not None:
         feat = feat.loc[~bad,:]
-        print('remove bad wells: ', feat.shape)
     meta = meta.loc[~bad,:]
+
+    print('Bad wells removed: ', n_samples - meta.shape[0])
 
     if feat is not None:
         return feat, meta
@@ -199,34 +206,52 @@ def remove_bad_wells(meta, bad_well_cols=None, feat=None):
 
 def remove_missing_bluelight_conditions(meta, feat=None):
     # remove wells missing blueligth conditions
+    n_samples = meta.shape[0]
+
     imgst_cols = [col for col in meta.columns if 'imgstore_name' in col]
     bad = meta[imgst_cols].isna().any(axis=1)
 
     if feat is not None:
         feat = feat.loc[~bad,:]
-        print('remove missing bluelight: ', feat.shape)
     meta = meta.loc[~bad,:]
+
+    print('Samples removed for missing bluelight: ', n_samples - meta.shape[0])
 
     if feat is not None:
         return feat, meta
     else:
         return meta
 
+def remove_samples_by_n_skeletons(min_n_skel, meta, feat=None):
+
+    keep = meta['n_skeletons'] >= min_n_skel
+
+    meta = meta[keep]
+    if feat is not None:
+        feat = feat[keep]
+
+    print('samples removed by n skeletons: ', keep.shape[0] - meta.shape[0])
+    return feat, meta
+
 def remove_samples_by_n_nan(feat, meta, threshold=7000):
     # remove wells with too many nans
+    n_samples = feat.shape[0]
+
     if threshold<1:
         threshold = int(threshold*feat.shape[1])
     meta = meta[feat.isna().sum(axis=1)<threshold]
     feat = feat[feat.isna().sum(axis=1)<threshold]
-    print('remove samples by n nan: ', feat.shape)
+    print('samples removed by n nan: ', n_samples - feat.shape[0])
     return feat, meta
 
 def remove_ft_by_n_nan(feat, threshold):
+    n_feat = feat.shape[1]
+
     if threshold<1:
         threshold = int(threshold*feat.shape[0])
     # remove features with over 10% nans
     feat = feat.loc[:, feat.isna().sum(axis=0)<threshold]
-    print('remove ft by n nan: ', feat.shape)
+    print('features removed by n nan: ', n_feat - feat.shape[1])
     return feat
 
 def impute_nans(feat, strain):
@@ -259,11 +284,12 @@ def preprocess_main(feat_file, fname_file, metadata_file,
         choose_strains=None,
         add_strain_id=False,
         choose_bluelight=None,
-        compounds_to_drop=None,
+        compounds_to_drop=None, compounds_to_keep=None,
         select_tierpsy_set=None,
         feat_groups_to_drop=None,
         remove_bad=True, bad_well_cols=None,
         remove_missing_bluelight=True,
+        min_n_skeletons=None,
         sample_max_nan_threshold=0.8,
         feat_max_nan_threshold=0.1,
         split_cv_test=True,
@@ -274,6 +300,10 @@ def preprocess_main(feat_file, fname_file, metadata_file,
         feat_file, fname_file, metadata_file,
         moa_file=moa_file,
         comment='#')
+
+    if min_n_skeletons is not None:
+        feat = feat[feat['n_skeletons']>=min_n_skeletons]
+        feat = feat.reset_index(drop=True)
 
     # Build metadata and matching features dfs
     feat, meta = build_meta_and_matching_feat_dfs(
@@ -304,6 +334,9 @@ def preprocess_main(feat_file, fname_file, metadata_file,
         meta = add_moa_info(meta, moa)
 
     if compounds_to_drop is not None:
+        feat, meta = drop_drug_names(meta, names=compounds_to_drop, feat=feat)
+    if compounds_to_keep is not None:
+        compounds_to_drop = meta.loc[~meta['drug_type'].isin(compounds_to_keep), 'drug_type'].unique()
         feat, meta = drop_drug_names(meta, names=compounds_to_drop, feat=feat)
 
     # Remove bad wells and preprocess features
