@@ -23,13 +23,6 @@ root_in = Path(INPUT_DIR)
 data_file = root_in/ 'features.csv'
 meta_file = root_in/ 'metadata.csv'
 
-# # split directory
-# root_split = root/ 'test_set'/'univariate_LMM'/'filtered_data' / 'curated'
-
-# train_file = root_split / 'train_compounds.csv'
-# test_file = root_split / 'test_compounds.csv'
-# novel_file = root_split / 'novelty_compounds.csv'
-
 saveroot = Path().cwd() / 'figures'
 saveroot.mkdir(exist_ok=True)
 
