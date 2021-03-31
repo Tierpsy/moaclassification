@@ -4,3 +4,5 @@
 **/.DS_Store
 **/features*.csv
 **/metadata*.csv
+**/*.svg
+**/*.pdf
