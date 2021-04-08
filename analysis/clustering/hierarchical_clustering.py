@@ -19,6 +19,10 @@ from scipy.cluster.hierarchy import linkage
 from sklearn.model_selection import StratifiedKFold
 from moaclassification import INPUT_DIR
 
+DRUGS_TO_HIGHLIGHT = ['SY1048', 'SY1081', 'SY1021', 'SY1793', 'SY1786', 'SY1713']
+# lut_h = dict(zip(['SY1048', 'SY1081', 'SY1021', 'other', 'SY1793', 'SY1786', 'SY1713'],
+#                  ['#8c510a', '#d8b365', '#f6e8c3', '#f5f5f5', '#c7eae5', '#5ab4ac', '#01665e']))
+
 plt.rcParams['svg.fonttype'] = 'none'
 
 #%% Input for aligned bluelight
@@ -34,13 +38,13 @@ meta_file = Path(INPUT_DIR) / 'metadata.csv'
 # split directory
 train_file = Path(INPUT_DIR) / 'split' / 'train_compounds.csv'
 test_file = Path(INPUT_DIR) / 'split' / 'test_compounds.csv'
-novel_file = Path(INPUT_DIR) / 'split' / 'novelty_compounds.csv'
 
 # MOa file
 moa_file = Path(INPUT_DIR) / 'AllCompoundsMoA.csv'
 
 # LUT file
 lut_file = Path(INPUT_DIR) / 'MOA_colors.csv'
+lut_h_file = Path(INPUT_DIR) / 'highlighted_drugs_colors.csv'
 
 saveroot = Path().cwd() / 'figures'
 saveroot.mkdir(exist_ok=True)
@@ -48,7 +52,6 @@ saveroot.mkdir(exist_ok=True)
 #%% Read and preprocess data
 train_compounds = pd.read_csv(train_file)
 test_compounds = pd.read_csv(test_file)
-novel_compounds = pd.read_csv(novel_file)
 
 feat = pd.read_csv(data_file, index_col=None)
 meta = pd.read_csv(meta_file, index_col=None)
@@ -96,6 +99,7 @@ feat = pd.concat([feat, meta[['drug_type', 'drug_dose']]], axis=1)
 feat = feat.groupby(by=['drug_type', 'drug_dose']).mean()
 
 meta = meta.groupby(by=['drug_type', 'drug_dose']).agg(lambda x: x.iloc[0])
+meta = meta.reset_index(drop=False)
 feat.index = ['_'.join([str(x) for x in a]) for a in feat.index]
 meta.index = feat.index
 
@@ -110,6 +114,7 @@ row_linkage = linkage(feat, method=method, metric=metric)
 savefig = saveroot/'figure2_clustermap'
 savefig.mkdir(exist_ok=True)
 
+# Get row colors that show MOA and mathcing legend data
 labels = meta['MOA_general']
 labels.name = 'MOA'
 
@@ -119,13 +124,23 @@ row_colors = pd.DataFrame(labels)['MOA'].map(lut)
 
 legend_TN = [mpatches.Patch(color=c, label=l) for l,c in lut.items()]
 
+# Get row colors that show highlighted drugs
+highlight_labels = meta['drug_type']
+highlight_labels[~highlight_labels.isin(DRUGS_TO_HIGHLIGHT)] = 'other'
+lut_h = pd.read_csv(lut_h_file)
+lut_h = dict(lut_h.values)
+
+highlights = pd.DataFrame(highlight_labels)['drug_type'].map(lut_h)
+
+# Plot the heatmap
 g = sns.clustermap(feat, vmin=-1, vmax=1, method=method,
-                    row_linkage=row_linkage, row_colors=row_colors,
+                    row_linkage=row_linkage, row_colors=[highlights, row_colors],
                     figsize=(15,10), xticklabels=False, yticklabels=False,
                     cbar_kws={'label': 'znorm'})
 g.ax_heatmap.xaxis.axes.xaxis.set_label_text('features')
 g.ax_heatmap.yaxis.axes.yaxis.set_label_text('all doses of all compounds')
 
+# Make legend for MOA colors
 l2=g.ax_heatmap.legend(loc='center left', bbox_to_anchor=(1.1,0.5),
                         handles=legend_TN, frameon=True, fontsize=14)
 l2.set_title(title='MOA groups',prop={'size':14})
